@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1F2937">
+  <meta name="description" content="Mohamed — Full Stack Web Developer building modern, scalable and user-focused web applications.">
+  <meta property="og:title" content="Mohamed — Full Stack Web Developer">
+  <meta property="og:description" content="Modern, scalable and user-focused web applications.">
+  <meta property="og:type" content="website">
+  <title>Mohamed — Full Stack Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>if(matchMedia("(hover:hover) and (pointer:fine)").matches)document.documentElement.classList.add("has-cursor")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhance.css">
+</head>
+<body>
+  <div id="cursor" class="cursor"></div><div id="cursorTrail" class="cursor-trail"></div>
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="terminal">
+      <div class="terminal-top"><span></span><span></span><span></span><b>terminal</b></div>
+      <div class="terminal-body"><span class="prompt">$</span> <span id="typedCode"></span><span class="caret"></span></div>
+    </div>
+    <div class="hello-stage"><span id="helloWord"></span></div>
+  </div>
+
+  <header class="nav-wrap" id="nav">
+    <nav class="nav container">
+      <a class="brand magnetic" href="#home" aria-label="Mohamed home"><span class="brand-mark">M</span><span>mohamed</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">Home</a><a href="#about" data-i18n="nav.about">About</a><a href="#services" data-i18n="nav.services">Services</a><a href="#skills" data-i18n="nav.skills">Skills</a><a href="#education" data-i18n="nav.education">Education</a><a href="#projects" data-i18n="nav.projects">Projects</a><a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-actions"><button class="icon-btn magnetic" id="settingsBtn" aria-label="Settings">⚙</button><button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="hero.hello">hello i'm mohamed</span></p>
+          <h1><span>FULL STACK</span><strong>WEB DEVELOPER</strong></h1>
+          <p class="hero-sub" data-i18n="hero.sub">I build modern, scalable and user-focused web applications.</p>
+          <div class="hero-actions"><a href="#projects" class="btn btn-primary magnetic" data-i18n="hero.cta">Explore My Work <span>↗</span></a><a href="#contact" class="text-link" data-i18n="hero.talk">Let's talk <span>→</span></a></div>
+          <div class="hero-meta"><span><b>06</b><small data-i18n="hero.meta.projects">Selected projects</small></span><span><b>FS</b><small data-i18n="hero.meta.focus">Full-stack focus</small></span></div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-frame"><img src="assets/hero-photo.jpg" alt="Mohamed, Full Stack Web Developer" width="1200" height="1500" fetchpriority="high" decoding="async"><div class="frame-glow"></div><div class="floating-chip chip-one">&lt;/&gt; clean code</div><div class="floating-chip chip-two">React · TypeScript</div></div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span><small data-i18n="hero.scroll">Scroll to explore</small></div>
+    </section>
+
+    <section class="about section" id="about"><div class="container two-col"><div class="section-heading reveal"><span class="kicker">01 /</span><h2 data-i18n="about.title">Who I am</h2></div><div class="about-copy reveal"><p class="lead" data-i18n="about.lead">I'm a Full Stack Web Developer focused on turning ideas into polished digital products.</p><p data-i18n="about.p1">I care about the whole experience — from a clear interface and responsive frontend to reliable logic, APIs and maintainable code behind it.</p><p data-i18n="about.p2">My projects cover dashboards, content platforms, real-estate experiences, nutrition tools, quizzes and data-driven applications. I like solving practical problems with modern technologies and thoughtful UX.</p><figure class="avatar-card reveal"><svg class="avatar" viewBox="0 0 360 320" role="img" aria-label="Illustrated avatar of Mohamed sitting with a laptop"><circle cx="180" cy="170" r="140" fill="var(--lightgreen)"/><rect x="108" y="150" width="144" height="150" rx="36" fill="#1f2937"/><path d="M104 300c0-86 30-124 76-124s76 38 76 124z" fill="#2b2b2b"/><path d="M126 206q-24 44 26 56M234 206q24 44-26 56" stroke="#2b2b2b" stroke-width="28" fill="none" stroke-linecap="round"/><rect x="164" y="148" width="32" height="34" rx="12" fill="#d29a6b"/><path d="M156 166q24 22 48 0v18h-48z" fill="#222"/><ellipse cx="139" cy="104" rx="8" ry="12" fill="#d29a6b"/><ellipse cx="221" cy="104" rx="8" ry="12" fill="#d29a6b"/><ellipse cx="180" cy="104" rx="40" ry="48" fill="#dfa574"/><path d="M137 98c-6-40 20-56 44-54 26-2 48 16 42 54-8-18-24-26-44-26s-34 8-42 26z" fill="#18120e"/><path d="M146 66q30-26 70 0q-30-10-70 0z" fill="#2a2018"/><path d="M140 108c2 40 22 52 40 52s38-12 40-52c-8 16-20 22-40 22s-32-6-40-22z" fill="#17120f"/><path d="M168 134q12 6 24 0" stroke="#7a4a35" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M158 103q6 4 12 0M190 103q6 4 12 0" stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M154 93h17M189 93h17" stroke="#17120f" stroke-width="4" stroke-linecap="round"/><ellipse cx="146" cy="252" rx="15" ry="11" fill="#dfa574"/><ellipse cx="214" cy="252" rx="15" ry="11" fill="#dfa574"/><rect x="112" y="244" width="136" height="58" rx="8" fill="#3b424c"/><rect x="118" y="250" width="124" height="46" rx="5" fill="#2f353d"/><text x="180" y="281" text-anchor="middle" font-family="monospace" font-size="20" font-weight="700" fill="#A7C957">&lt;/&gt;</text><rect x="224" y="236" width="12" height="7" rx="2" fill="#cfd4da"/><rect x="40" y="300" width="280" height="12" rx="6" fill="#b9824f"/><g class="bub"><rect x="248" y="56" width="74" height="30" rx="15" fill="var(--card)" stroke="var(--border)"/><text x="285" y="76" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary)">npm run dev</text></g></svg><figcaption data-i18n="avatar.cap">Me, in my natural habitat — behind a laptop, building.</figcaption></figure><div class="about-tags"><span>Problem solving</span><span>Responsive UI</span><span>Clean architecture</span><span>Client focused</span></div></div></div></section>
+
+    <section class="services section" id="services"><div class="container"><div class="section-heading reveal"><span class="kicker">02 /</span><h2 data-i18n="services.title">What I offer</h2><p data-i18n="services.intro">From interface to implementation, I build web experiences that are clear, useful and ready to grow.</p></div><div class="service-grid"><article class="service-card reveal"><span>01</span><div class="service-icon">◈</div><h3 data-i18n="services.s1.t">Full Stack Development</h3><p data-i18n="services.s1.p">Complete web applications with thoughtful frontend and backend structure.</p></article><article class="service-card reveal"><span>02</span><div class="service-icon">⌘</div><h3 data-i18n="services.s2.t">Frontend Development</h3><p data-i18n="services.s2.p">Responsive, accessible interfaces built around real user needs.</p></article><article class="service-card reveal"><span>03</span><div class="service-icon">↯</div><h3 data-i18n="services.s3.t">APIs & Data</h3><p data-i18n="services.s3.p">Practical API integration and interactive data-driven experiences.</p></article><article class="service-card reveal"><span>04</span><div class="service-icon">✦</div><h3 data-i18n="services.s4.t">Modern UI Experiences</h3><p data-i18n="services.s4.p">Polished interactions, responsive layouts and details that make products feel finished.</p></article></div></div></section>
+
+    <section class="usp section"><div class="container usp-box reveal"><div><span class="kicker">03 /</span><h2 data-i18n="usp.title">Built with the bigger picture in mind.</h2></div><div class="usp-points"><div><b>01</b><span data-i18n="usp.a">I think beyond a single screen — product flow, responsiveness and maintainability matter.</span></div><div><b>02</b><span data-i18n="usp.b">I combine technical thinking with a strong eye for clean, meaningful interfaces.</span></div><div><b>03</b><span data-i18n="usp.c">I focus on useful outcomes instead of adding complexity just to look impressive.</span></div></div></div></section>
+
+    <section class="skills section" id="skills"><div class="container"><div class="section-heading reveal"><span class="kicker">04 /</span><h2 data-i18n="skills.title">Skills & technologies</h2></div><div class="skills-layout"><div class="skill-intro reveal"><p class="lead" data-i18n="skills.lead">A practical toolkit shaped by real projects.</p><p data-i18n="skills.p">I use the tools that fit the problem, with an emphasis on clean structure, responsive behavior and maintainable code.</p></div><div class="skill-cloud reveal" id="skillCloud"></div></div></div></section>
+
+    <section class="education section" id="education"><div class="container"><div class="section-heading reveal"><span class="kicker">05 /</span><h2 data-i18n="education.title">Education & certifications</h2></div><div class="timeline"><article class="timeline-item reveal"><span class="dot"></span><div><small>Academic Education</small><h3>Computer and Information Science</h3><p>Computer and Information Science</p></div></article><article class="timeline-item reveal"><span class="dot"></span><div><small>Scholarship</small><h3>NTI — National Telecommunication Institute</h3><p>Scholarship program affiliated with the Ministry of Communications and Information Technology (MCIT).</p></div></article><article class="timeline-item reveal"><span class="dot"></span><div><small>Certification</small><h3>Frontend Development</h3><p>Frontend Development Certificate</p></div></article><article class="timeline-item reveal"><span class="dot"></span><div><small>Certification</small><h3>Backend Development</h3><p>Backend Development Certificate</p></div></article></div></div></section>
+
+    <section class="projects section" id="projects"><div class="container"><div class="projects-head"><div class="section-heading reveal"><span class="kicker">06 /</span><h2 data-i18n="projects.title">Selected work</h2><p data-i18n="projects.intro">Six projects that show different sides of my development work.</p></div><span class="project-count">06 / 06</span></div><div class="project-grid" id="projectGrid"></div></div></section>
+
+    <section class="contact section" id="contact"><div class="container contact-grid"><div class="contact-copy reveal"><span class="kicker">07 /</span><h2 data-i18n="contact.title">Have a project in mind?</h2><p data-i18n="contact.p">Let's build something meaningful together. Tell me what you're working on and I'll get back to you.</p><div class="socials"><a class="social" data-link="instagram" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>Instagram</span></a><a class="social" data-link="whatsapp" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a><a class="social" data-link="email" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Gmail</span></a><a class="social" data-link="github" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a></div></div><form class="contact-form reveal" id="contactForm"><label><span data-i18n="form.name">Name</span><input id="name" required maxlength="80" autocomplete="name"></label><label><span data-i18n="form.email">Email</span><input id="email" type="email" required maxlength="120" autocomplete="email"></label><label><span data-i18n="form.subject">Subject</span><input id="subject" required maxlength="120"></label><label><span data-i18n="form.message">Message</span><textarea id="message" required minlength="15" maxlength="2000" rows="6"></textarea></label><button class="btn btn-primary magnetic" type="submit"><span data-i18n="form.send">Prepare Gmail Message</span> ↗</button><p class="form-note" id="formNote"></p></form></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><div><strong>Mohamed</strong><span>Full Stack Web Developer</span></div><div class="footer-social"><a data-link="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a data-link="whatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a data-link="email" href="#" target="_blank" rel="noopener" aria-label="Gmail"><i class="fa-solid fa-envelope"></i></a><a data-link="github" href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></div><span>© <span id="year"></span> Mohamed. All rights reserved.</span><a href="#home">Back to top ↑</a></div></footer>
+
+  <aside class="settings-panel" id="settingsPanel" aria-hidden="true"><div class="settings-head"><h2>Settings</h2><button id="closeSettings">×</button></div><div class="setting-group"><h3>Theme</h3><div class="segmented"><button data-theme="light">Light</button><button data-theme="dark">Dark</button></div></div><div class="setting-group"><h3>Language</h3><div class="segmented"><button data-lang="en">English</button><button data-lang="ar">العربية</button></div></div><div class="setting-group"><h3>Font</h3><div class="font-options"><button data-font="Inter">Inter</button><button data-font="Manrope">Manrope</button><button data-font="Space Grotesk">Space Grotesk</button><button data-font="Cairo">Cairo</button></div></div></aside><div class="overlay" id="overlay"></div>
+
+  <div class="project-modal" id="projectModal" aria-hidden="true"><div class="modal-inner"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+  <script src="config.js"></script>
+  <script src="sound.js"></script>
+  <script src="script.js"></script>
+  <script src="enhance.js"></script>
+</body>
+</html>

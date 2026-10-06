@@ -1,0 +1,62 @@
+/* ===== Native cursor hidden from first paint (desktop only) ===== */
+.has-cursor,.has-cursor *{cursor:none!important}
+html.has-cursor{scroll-behavior:auto}
+.cursor,.cursor-trail{left:0;top:0;transform:translate3d(-100px,-100px,0);opacity:0;will-change:transform;transition:opacity .3s,width .35s var(--ease),height .35s var(--ease),background .3s,border-color .3s}
+.cursor.on,.cursor-trail.on{opacity:1}
+.cursor{width:8px;height:8px;margin:-4px 0 0 -4px}
+.cursor-trail{width:34px;height:34px;margin:-17px 0 0 -17px;display:grid;place-items:center;font:700 .66rem/1 var(--font);color:#fff;letter-spacing:.06em}
+.cursor-trail.hover{width:56px;height:56px;margin:-28px 0 0 -28px;background:rgba(107,142,90,.14);border-color:rgba(167,201,87,.7)}
+.cursor-trail.view{width:84px;height:84px;margin:-42px 0 0 -42px;background:var(--primary);border-color:transparent}
+.cursor-trail.view:after{content:'VIEW ↗'}
+.cursor.down{transform-origin:center}
+.cursor-trail.down{width:24px;height:24px;margin:-12px 0 0 -12px}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--primary),var(--olive))}
+
+/* ===== Professional hover system ===== */
+.service-card,.project-card,.skill,.social,.contact-form{position:relative}
+.service-card:before,.project-card:before,.skill:before,.social:before,.contact-form:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;opacity:0;transition:opacity .35s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(167,201,87,.16),transparent 62%)}
+.service-card:hover:before,.project-card:hover:before,.skill:hover:before,.social:hover:before,.contact-form:hover:before{opacity:1}
+.skill,.social{overflow:hidden}
+/* nav underline */
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a:after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--primary);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav-links a:hover:after,.nav-links a.active:after{transform:scaleX(1);transform-origin:left}
+/* buttons: shine sweep */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn:after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .7s var(--ease);z-index:-1}
+.btn:hover:after{left:130%}
+.btn:active{transform:scale(.97)}
+.text-link{position:relative}.text-link span{display:inline-block;transition:transform .3s var(--ease)}.text-link:hover span{transform:translateX(5px)}
+.icon-btn{transition:.3s var(--ease)}.icon-btn:hover{border-color:var(--primary);color:var(--primary);transform:rotate(30deg) scale(1.08);box-shadow:0 8px 24px rgba(107,142,90,.25)}
+/* service cards */
+.service-card:hover .service-icon{background:var(--primary);color:#fff;transform:rotate(-6deg) scale(1.06)}
+.service-icon{transition:.4s var(--ease)}
+/* project cards: 3 per row */
+.project-grid{grid-template-columns:repeat(3,1fr);gap:22px;perspective:1200px}
+.project-card{transform-style:preserve-3d;will-change:transform}
+.project-info{padding:20px 22px 22px}.project-info h3{font-size:1.4rem}.project-info p{font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.project-image:after{content:'↗';position:absolute;right:14px;top:14px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:700;transform:translate(8px,-8px) scale(.6);opacity:0;transition:.4s var(--ease);z-index:3}
+.project-card:hover .project-image:after{opacity:1;transform:none}
+.project-card:hover{border-color:color-mix(in srgb,var(--primary) 45%,var(--border))}
+.project-card:hover .project-overlay{opacity:1}
+.project-overlay{transition:opacity .4s}
+@media(max-width:1100px){.project-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.project-grid{grid-template-columns:1fr}}
+/* socials */
+.social i{font-size:1.05rem;transition:transform .3s var(--ease)}.social:hover i{transform:scale(1.2) rotate(-8deg)}
+.footer-social{display:flex;gap:8px}.footer-social a{width:36px;height:36px;border:1px solid var(--border);border-radius:50%;display:grid;place-items:center;transition:.3s var(--ease)}.footer-social a:hover{background:var(--primary);color:#fff;border-color:var(--primary);transform:translateY(-3px)}
+/* avatar */
+.avatar-card{display:flex;align-items:center;gap:22px;margin:34px 0 0;padding:16px 22px 16px 16px;max-width:560px;background:var(--card);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow)}
+.avatar{width:170px;flex:none;overflow:visible}.avatar-card figcaption{color:var(--muted);font-size:.95rem}
+.avatar{animation:bob 5s ease-in-out infinite}.bub{animation:bob 4s ease-in-out infinite reverse}
+@keyframes bob{50%{transform:translateY(-5px)}}
+@media(max-width:520px){.avatar-card{flex-direction:column;text-align:center;padding:18px}}
+body.rtl .avatar-card{flex-direction:row-reverse}
+/* intro sound hint */
+@media(prefers-reduced-motion:reduce){.avatar,.bub{animation:none}.btn:after{display:none}}
+/* click-to-start gate */
+.intro-gate{position:absolute;inset:0;z-index:5;border:0;background:#000;color:#e8efe4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;font:500 1rem var(--font);letter-spacing:.04em;transition:opacity .45s}
+.intro-gate.out{opacity:0}
+.gate-ring{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;color:var(--olive);border:1px solid rgba(167,201,87,.45);animation:gatePulse 1.8s ease-out infinite}
+.intro-gate small{color:#7d8791;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:-8px}
+@keyframes gatePulse{0%{box-shadow:0 0 0 0 rgba(167,201,87,.35)}100%{box-shadow:0 0 0 28px rgba(167,201,87,0)}}
